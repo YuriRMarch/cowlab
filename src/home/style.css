@@ -1,0 +1,128 @@
+/* Garantir que o restante do conteúdo possa rolar */
+main {
+  padding-top: 0; /* Remover qualquer padding extra */
+}
+
+footer > div {
+  padding: 25px;
+}
+
+.banner-home > div > p {
+  width: 50%;
+  color: #242424;
+  font-size: 19px;
+}
+
+.logo-img {
+  width: 8%;
+}
+.card-body {
+  height: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-body:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+.btn-group {
+  display: initial;
+}
+.blue-text {
+  color: #006eff;
+}
+.txt-dark-gray {
+}
+
+.bg-blue {
+  background-color: #006eff;
+}
+
+.h1-title-montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 70px;
+  width: 50%;
+  line-height: 1;
+  letter-spacing: 0;
+}
+.banner-home {
+  margin-bottom: 0;
+  height: 100vh; /* Altura da viewport */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../../assets/img/banner-home.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+}
+.text-box {
+  margin-left: 44vw;
+  margin-top: 42vh;
+}
+
+.btn:link,
+.btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  display: inline-block;
+  border-radius: 100px;
+  transition: all 0.2s;
+  position: absolute;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-white {
+  background-color: #fff;
+  color: #777;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn-white::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated {
+  animation: moveInBottom 5s ease-out;
+  animation-fill-mode: backwards;
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
